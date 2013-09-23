@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if [ -z "$1" ]; then
+    echo "npm install + package.json reformatter"
+    echo "Usage: $0 package [package [...]]"
+    exit 1
+fi
+
+json="$(npm ls --parseable | head -n 1)/package.json"
+
+if [ ! -f "$json" ]; then
+    echo "No package.json found"
+    exit 1
+fi
+
+npm install -S "$@"  &&  json-align -i "$json"
