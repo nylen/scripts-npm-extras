@@ -2,7 +2,7 @@
     "name"        : "scripts-npm-extras",
     "author"      : "James Nylen <jnylen@gmail.com>",
     "description" : "Scripts for working with npm packages.",
-    "version"     : "0.0.1",
+    "version"     : "0.0.2",
     "repository"  : {
         "type" : "git",
         "url"  : "https://github.com/nylen/scripts-npm-extras"
@@ -13,13 +13,9 @@
     "license"  : "MIT",
     "keywords" : [
         "scripts",
-        "debian",
+        "npm",
         "packages"
     ],
-    "scripts" : {
-        "postinstall" : "scripts/install.sh",
-        "uninstall"   : "scripts/install.sh"
-    },
     "bin" : {
         "npmi" : "bin/npmi"
     },
