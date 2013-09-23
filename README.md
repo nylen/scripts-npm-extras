@@ -7,11 +7,18 @@ The scripts are packaged using `npm` for convenience.
 
 ## Installation
 
+This module depends on [`json-align`](https://github.com/nylen/node-json-align)
+as well, so you need to install it globally, because
+[npm won't do it for you](https://github.com/isaacs/npm/issues/2949#issuecomment-11408461)
+(to prevent possible dependency hell issues).
+
     sudo npm install -g scripts-npm-extras
+    sudo npm install -g json-align
 
 Similarly, to uninstall:
 
     sudo npm rm -g scripts-npm-extras
+    sudo npm rm -g json-align
 
 ## Scripts
 
