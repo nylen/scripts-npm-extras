@@ -6,11 +6,18 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-json="$(npm ls --parseable | head -n 1)/package.json"
+package_json="$(npm ls --parseable | head -n 1)/package.json"
 
-if [ ! -f "$json" ]; then
+if [ ! -f "$package_json" ]; then
     echo "No package.json found"
     exit 1
 fi
 
-npm install -S "$@"  &&  json-align -i "$json"
+JSON_ALIGN="$(dirname $(realpath "$0"))/../node_modules/.bin/json-align"
+
+if [ ! -x "$JSON_ALIGN" ]; then
+    echo "json-align script not found at $JSON_ALIGN"
+    exit 1
+fi
+
+npm install -S "$@"  &&  "$JSON_ALIGN" -i "$package_json"
