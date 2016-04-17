@@ -2,7 +2,7 @@
     "name"        : "scripts-npm-extras",
     "author"      : "James Nylen <jnylen@gmail.com>",
     "description" : "Scripts for working with npm packages.",
-    "version"     : "0.0.3",
+    "version"     : "0.1.0",
     "repository"  : {
         "type" : "git",
         "url"  : "https://github.com/nylen/scripts-npm-extras"
